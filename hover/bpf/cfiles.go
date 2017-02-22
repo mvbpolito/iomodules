@@ -378,7 +378,7 @@ int controller_module_tx(struct __sk_buff *skb) {
 	x=skb->cb[4];
 	md->md[2] = x;
 
-	bpf_trace_printk("pkt.to.ctrl md(1,2,3) %d %d %d\n",md->md[0],md->md[1],md->md[2]);
+	// bpf_trace_printk("pkt.to.ctrl md(1,2,3) %d %d %d\n",md->md[0],md->md[1],md->md[2]);
 
 	bpf_redirect(CONTROLLER_INTERFACE_ID, 0);
 
